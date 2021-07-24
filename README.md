@@ -28,6 +28,6 @@ Pour ce faire, j'ai fait la commande: `sudo nano /etc/default/grub`
 Dans le fichier, la ligne devrait ressembler à ça:
 <code>GRUB_CMDLINE_LINUX_DEFAULT="quiet <b>pci=noaer pcie_aspm=off nomodeset</b> splash"</code>
 
-`Ctrl+W Enter Ctrl+X`
+`Ctrl+W Enter Ctrl+X` 
 
-Après avoir enregistré le fichier, on va entrer la commande: `reboot` pour vérifier le fonctionnement de la machine Ubuntu.
+Après avoir enregistré le fichier, on va entrer la commande: `update-grub` et `reboot` pour vérifier le fonctionnement de la machine Ubuntu.
