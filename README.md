@@ -18,3 +18,16 @@ On ajoute `pci=noaer pcie_aspm=off` à la ligne entre quiet et splash.
 
 **À noter**: Le secure boot de l'ordinateur doit être désactivé.
 [Liens vers la vidéos ASUS pour désactiver le secure boot](https://www.youtube.com/watch?v=tnOHi0w77bU)
+
+À la fin de l'installation du système d'exploitation. J'ai eu un problème de black screen. Pour résoudre le problème, j'ai appuyer sur `esc` jusqu'à ce que le menu grub apparaisse. Ensuite, j'ai appuyé sur `e` pour affichier le fichier grub et j'ai ajouté `nomodeset pci=noaer` entre quiet et splash.
+
+Avec le système ouvert, on va rendre les modifications permanentes.
+
+Pour ce faire, j'ai fait la commande: `sudo nano /etc/default/grub`
+
+Dans le fichier, la ligne devrait ressembler à ça:
+<code>GRUB_CMDLINE_LINUX_DEFAULT="quiet <b>pci=noaer pcie_aspm=off nomodeset</b> splash"</code>
+
+`Ctrl+W Enter Ctrl+X`
+
+Après avoir enregistré le fichier, on va entrer la commande: `reboot` pour vérifier le fonctionnement de la machine Ubuntu.
