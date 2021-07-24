@@ -30,4 +30,4 @@ Dans le fichier, la ligne devrait ressembler à ça:
 
 `Ctrl+W Enter Ctrl+X` 
 
-Après avoir enregistré le fichier, on va entrer la commande: `update-grub` et `reboot` pour vérifier le fonctionnement de la machine Ubuntu.
+Après avoir enregistré le fichier, on va entrer la commande: `sudo update-grub` et `reboot` pour vérifier le fonctionnement de la machine Ubuntu.
